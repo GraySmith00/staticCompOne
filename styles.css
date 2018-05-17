@@ -1,0 +1,36 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page-container {
+  height: 100vh;
+  display: flex;
+}
+
+.tiles {
+  background-color: steelblue;
+  flex: 6;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tile-item {
+  background-color: chartreuse;
+  border: 2px solid gray;
+}
+
+.tile1 {
+  grid-column: span 2;
+}
+
+.photo {
+  background-color: crimson;
+  flex: 4;
+}
