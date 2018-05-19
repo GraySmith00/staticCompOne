@@ -6,6 +6,8 @@
 
 body {
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
 }
 
 .page-container {
@@ -16,21 +18,105 @@ body {
 .tiles {
   background-color: steelblue;
   flex: 6;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  color: #fff;
+}
+
+.photo {
+  background: url('./public/images/winnieOffice.jpg');
+  background-size: cover;
+  /* -ms-background-position-x: center;
+  -ms-background-position-y: bottom; */
+  background-position: center center;
+
+  flex: 4;
 }
 
 .tile-item {
-  background-color: chartreuse;
   border: 2px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-item p {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 0.5rem;
+}
+
+.tile-item i {
+  font-size: 3rem;
 }
 
 .tile1 {
   grid-column: span 2;
+  padding: 0 0 0 2rem;
+  background-color: #254750;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.photo {
-  background-color: crimson;
-  flex: 4;
+.tile1 h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.tile1 div {
+  margin-top: 20px;
+}
+
+.tile1 div i {
+  font-size: 0.6rem;
+}
+
+.tile1 div button {
+  padding: 10px 20px;
+  margin-right: 20px;
+
+  border: 2px solid #fff;
+  background-color: inherit;
+  color: #fff;
+}
+
+.tile2 {
+  background-color: #7b3551;
+}
+
+.tile3 {
+  background-color: #103339;
+}
+
+.tile4 {
+  background-color: #c42f59;
+}
+
+.tile5 {
+  background-color: #5e3f50;
+}
+
+.tile6 {
+  background-color: #254750;
+}
+
+.tile7 {
+  background-color: #7b3551;
+}
+
+.tile8 {
+  background-color: #103339;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .tiles {
+    order: 1;
+  }
 }
