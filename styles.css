@@ -18,8 +18,8 @@ body {
 .photo {
   background: url('./public/images/winnieOffice.jpg');
   background-size: cover;
-  /* -ms-background-position-x: center;
-  -ms-background-position-y: bottom; */
+  -ms-background-position-x: center;
+  -ms-background-position-y: center;
   background-position: center center;
 
   flex: 4;
@@ -75,7 +75,7 @@ body {
 }
 
 .tiles {
-  background-color: steelblue;
+  background-color: #254750;
   flex: 6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -160,12 +160,33 @@ body {
   background-color: #103339;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .page-container {
     flex-direction: column;
   }
 
   .tiles {
     order: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-container {
+    height: auto;
+  }
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tile-item {
+    padding: 15px;
+  }
+  .photo {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .tile-item {
+    grid-column: span 2;
   }
 }
